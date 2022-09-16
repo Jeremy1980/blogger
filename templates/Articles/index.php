@@ -3,6 +3,7 @@
     <tr>
         <th>Title</th>
         <th>Created</th>
+        <th>Published</th>
         <th>Action</th>
     </tr>
 
@@ -17,6 +18,11 @@
             <?= $article->created->format(DATE_RFC850) ?>
         </td>
         <td>
+            <?= empty($article->published) ?"Draft" :$article->published->format(DATE_RFC850) ?>
+            <?= $article->activated ?"/Active/" :"/Inactive/" ?>
+        </td>
+        <td>
+            <?= $this->Html->link('Publish', ['action' => 'publish', $article->slug]) ?>
             <?= $this->Html->link('Edit', ['action' => 'edit', $article->slug]) ?>
             <?= $this->Form->postLink(
                 'Delete',
@@ -26,5 +32,4 @@
         </td>        
     </tr>
     <?php endforeach; ?>
-    <?= $this->Html->link('Add Article', ['action' => 'add']) ?>
 </table>

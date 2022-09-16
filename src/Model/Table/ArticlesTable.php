@@ -23,8 +23,7 @@ class ArticlesTable extends Table
     {
         if ($entity->isNew() && !$entity->slug) {
             $sluggedTitle = Text::slug($entity->title);
-            // trim slug to maximum length defined in schema
-            $entity->slug = substr($sluggedTitle, 0, 191);
+            $entity->slug = strtolower(substr($sluggedTitle, 0, 191)) .'-'. date("mds");
         }
     }
 

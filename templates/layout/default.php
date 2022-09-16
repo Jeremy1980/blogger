@@ -40,7 +40,8 @@
             <a href="<?= $this->Url->build('/') ?>"><span>Cake</span>PHP</a>
         </div>
         <div class="top-nav-links">
-            <a target="_blank" rel="noopener" href="/articles">Articles</a>
+            <?= $this->Html->link('Add Article', ['action' => 'add']) ?>
+            <?= $this->Html->link('Articles', '/articles', ['rel' => 'noopener']) ?>
         </div>
     </nav>
     <main class="main">

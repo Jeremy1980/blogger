@@ -75,24 +75,26 @@ $checkConnection = function (string $name) {
     </header>
     <main class="main">
         <div class="container">
-            <div class="row">
-            </div>
-            <div class="row">
-            </div>
-            <hr>
-            <div class="row">
-            </div>
-            <hr>
-            <div class="row">
-            </div>
-            <hr>
-            <div class="row">
-            </div>
-            <hr>
-            <div class="row">
-            </div>
-            <hr>
-            <div class="row">
+            <div class="content">
+                <div class="row">
+                </div>
+                <div class="row">
+                </div>
+                <hr>
+                <div class="row">
+                </div>
+                <hr>
+                <div class="row">
+                </div>
+                <hr>
+                <div class="row">
+                </div>
+                <hr>
+                <div class="row">
+                </div>
+                <hr>
+                <div class="row">
+                </div>
             </div>
         </div>
     </main>

@@ -10,6 +10,18 @@ class ArticlesController extends AppController
         $this->loadComponent('Paginator');
         $this->loadComponent('Flash'); // Include the FlashComponent
     }
+    
+    public function publish($slug = null)
+    {
+        $article = $this->Articles->findBySlug($slug)->firstOrFail();
+
+        $article->activated = 1;
+        $article->published = date("Y-m-d H:i:0");
+
+        $this->Articles->save($article);
+
+        return $this->redirect(['action' => 'index']);
+    }
 
     public function index()
     {
@@ -30,11 +42,13 @@ class ArticlesController extends AppController
         if ($this->request->is('post')) {
             $article = $this->Articles->patchEntity($article, $this->request->getData());
 
-            // Hardcoding the user_id is temporary, and will be removed later
-            // when we build authentication out.
             $article->user_id = 1;
 
             if ($this->Articles->save($article)) {
+                $this->Articles->updateAll(
+                    array('activated'=>$article->active ?1 :0 ,'modified'=>$article->created ) , array('slug' => $article->slug)
+                );
+
                 $this->Flash->success(__('Your article has been saved.'));
                 return $this->redirect(['action' => 'index']);
             }
@@ -50,8 +64,13 @@ class ArticlesController extends AppController
             ->firstOrFail();
     
         if ($this->request->is(['post', 'put'])) {
-            $this->Articles->patchEntity($article, $this->request->getData());
+            $this->Articles->patchEntity($article, $json = $this->request->getData());
+            
             if ($this->Articles->save($article)) {
+                $this->Articles->updateAll(
+                    array('activated'=>$article->active ?1 :0 ,'modified'=>date("Y-m-d H:i:0") ) , array('slug' => $slug)
+                );
+
                 $this->Flash->success(__('Your article has been updated.'));
                 return $this->redirect(['action' => 'index']);
             }
