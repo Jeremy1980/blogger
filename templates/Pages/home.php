@@ -24,7 +24,7 @@ $this->disableAutoLayout();
 
 $checkConnection = function (string $name) {
     $error = null;
-    $connected = false;
+    $connection = false;
     try {
         $connection = ConnectionManager::get($name);
         $connected = $connection->connect();
@@ -38,8 +38,17 @@ $checkConnection = function (string $name) {
         }
     }
 
-    return compact('connected', 'error');
+    return $error ?$error :$connection;
 };
+
+$articles_assoc = array();
+$conn = $checkConnection('default');
+$msg = is_object($conn)?'' :'CakePHP is NOT able to connect to the database.';
+
+if (empty($msg))
+{
+    $articles_assoc = $conn->execute('SELECT * FROM `articles` WHERE `activated` = "1" AND `published` IS NOT NULL;')->fetchAll('assoc');
+}
 
 ?>
 <!DOCTYPE html>
@@ -76,25 +85,23 @@ $checkConnection = function (string $name) {
     <main class="main">
         <div class="container">
             <div class="content">
+                <?php if ($msg) : ?>
+                <ul>
+                    <li class="bullet problem"><?= h($msg) ?></li>
+                </ul>
+                <?php else : ?>
+                <?php foreach($articles_assoc as $row): ?>
                 <div class="row">
-                </div>
-                <div class="row">
-                </div>
-                <hr>
-                <div class="row">
-                </div>
-                <hr>
-                <div class="row">
-                </div>
-                <hr>
-                <div class="row">
+                    <?= $this->Html->link($row['title'], '/articles/view/'.$row['slug']) ?>
                 </div>
                 <hr>
+                <?php endforeach; ?>
                 <div class="row">
+                    <div class="col-11 text-end">
+                        <?= $this->Html->link('Manage articles', '/articles', ['rel' => 'noopener']) ?>
+                    </div>
                 </div>
-                <hr>
-                <div class="row">
-                </div>
+                <?php endif; ?>
             </div>
         </div>
     </main>
