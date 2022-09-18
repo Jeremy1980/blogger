@@ -1,14 +1,27 @@
+<?php
+    $this->Paginator->setTemplates([
+        'first' => '<li class="page-item"><a class="page-link" href="{{url}}">{{text}}</a></li>',
+        'prevActive' => '<li class="page-item"><a class="page-link" href="{{url}}">{{text}}</a></li>',
+        'prevDisabled' => '<li class="page-item disabled"><a class="page-link" href="{{url}}">{{text}}</a></li>',
+        'current' => '<li class="page-item"><a class="page-link" href="{{url}}">{{text}}</a></li>',
+        'number' => '<li class="page-item"><a class="page-link" href="{{url}}">{{text}}</a></li>',
+        'nextActive' => '<li class="page-item"><a class="page-link" href="{{url}}">{{text}}</a></li>',
+        'nextDisabled' => '<li class="page-item disabled"><a class="page-link" href="{{url}}">{{text}}</a></li>',
+        'last' => '<li class="page-item"><a class="page-link" href="{{url}}">{{text}}</a></li>'
+    ]);
+?>        
+
 <h1>Articles</h1>
 <table>
+    <thead>
     <tr>
         <th>Title</th>
         <th>Created</th>
         <th>Published</th>
         <th>Action</th>
     </tr>
-
-    <!-- Here is where we iterate through our $articles query object, printing out article info -->
-
+    </thead>
+    <tbody>
     <?php foreach ($articles as $article): ?>
     <tr>
         <td>
@@ -32,4 +45,19 @@
         </td>        
     </tr>
     <?php endforeach; ?>
-</table>
+    </tbody>
+    </table>
+    
+    <div class="row">
+        <div class="col">
+            <nav aria-label="Page navigation">
+                <ul class="pagination">
+                    <?= $this->Paginator->first(__('First')) ?>
+                    <?= $this->Paginator->prev(__('Previous')) ?>
+                    <?= $this->Paginator->numbers() ?>
+                    <?= $this->Paginator->next(__('Next')) ?>
+                    <?= $this->Paginator->last(__('Last')) ?>
+                </ul>
+            </nav>
+        </div>
+    </div>

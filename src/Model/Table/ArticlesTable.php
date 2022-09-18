@@ -31,11 +31,18 @@ class ArticlesTable extends Table
     {
         $validator
             ->notEmptyString('title')
-            ->minLength('title', 10)
-            ->maxLength('title', 255)
+            ->add('title', [
+                'length' => [
+                    'rule' => ['minLength', 10],
+                    'message' => sprintf(__('Titles need to be at least %s characters long', true), 10),
+                ]
+            ])
 
             ->notEmptyString('body')
-            ->minLength('body', 10);
+            ->add('body', 'length', [
+                'rule' => ['minLength', 50],
+                'message' => __('Articles must have a substantial body.')
+            ]);
 
         return $validator;
     }    

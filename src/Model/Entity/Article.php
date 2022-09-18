@@ -10,10 +10,5 @@ class Article extends Entity
         'id' => false,
         'slug' => false,
     ];
-
-    // protected function _getActivated($activated) 
-    // {
-    //     return $this->slug;
-    // }
 }
 ?>

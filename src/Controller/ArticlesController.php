@@ -3,12 +3,17 @@ namespace App\Controller;
 
 class ArticlesController extends AppController
 {
+    public $paginate = [
+        'limit' => 10,
+        'order' => [ 'Articles.title' => 'asc' ]
+    ];
+
     public function initialize(): void
     {
         parent::initialize();
 
         $this->loadComponent('Paginator');
-        $this->loadComponent('Flash'); // Include the FlashComponent
+        $this->loadComponent('Flash');
     }
     
     public function publish($slug = null)
@@ -25,8 +30,7 @@ class ArticlesController extends AppController
 
     public function index()
     {
-        $this->loadComponent('Paginator');
-        $articles = $this->Paginator->paginate($this->Articles->find());
+        $articles = $this->Paginator->paginate($this->Articles->find(),$this->paginate);
         $this->set(compact('articles'));
     }
 
@@ -43,12 +47,9 @@ class ArticlesController extends AppController
             $article = $this->Articles->patchEntity($article, $this->request->getData());
 
             $article->user_id = 1;
+            $article->activated = $article->active ?1 :0;
 
             if ($this->Articles->save($article)) {
-                $this->Articles->updateAll(
-                    array('activated'=>$article->active ?1 :0 ,'modified'=>$article->created ) , array('slug' => $article->slug)
-                );
-
                 $this->Flash->success(__('Your article has been saved.'));
                 return $this->redirect(['action' => 'index']);
             }
@@ -66,11 +67,10 @@ class ArticlesController extends AppController
         if ($this->request->is(['post', 'put'])) {
             $this->Articles->patchEntity($article, $json = $this->request->getData());
             
-            if ($this->Articles->save($article)) {
-                $this->Articles->updateAll(
-                    array('activated'=>$article->active ?1 :0 ,'modified'=>date("Y-m-d H:i:0") ) , array('slug' => $slug)
-                );
+            $article->activated = $article->active ?1 :0;
+            $article->modified = date("Y-m-d H:i:0");
 
+            if ($this->Articles->save($article)) {
                 $this->Flash->success(__('Your article has been updated.'));
                 return $this->redirect(['action' => 'index']);
             }
