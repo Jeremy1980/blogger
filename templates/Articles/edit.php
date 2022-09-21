@@ -16,5 +16,5 @@
                     ,'image','link','unlink','hr']
     ,maxHeight : 310
     });
-  });
+ });
 </script>
