@@ -219,3 +219,67 @@ th {
         content: " \2190";
     }
 }
+
+
+/* Error Page */
+  .error-container svg.error404  {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    margin-top: -250px;
+    margin-left: -400px;
+  }
+  .error-container .error404.message-box {
+    height: 200px;
+    width: 380px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    margin-top: -100px;
+    margin-left: 50px;
+    font-weight: 300;
+  }
+  .error-container .error404.message-box h1 {
+    font-size: 60px;
+    line-height: 46px;
+    margin-bottom: 40px;
+  }
+  
+  .error-container .error404 #Polygon-1 , #Polygon-2 , #Polygon-3 , #Polygon-4 , #Polygon-4, #Polygon-5 {
+    animation: float 1s infinite ease-in-out alternate;
+  }
+  .error-container .error404 #Polygon-2 {
+    animation-delay: .2s; 
+  }
+  .error-container .error404 #Polygon-3 {
+    animation-delay: .4s; 
+  }
+  .error-container .error404 #Polygon-4 {
+    animation-delay: .6s; 
+  }
+  .error-container .error404 #Polygon-5 {
+    animation-delay: .8s; 
+  }
+  
+  @keyframes float {
+      100% {
+      transform: translateY(20px);
+    }
+  }
+
+  @media (max-width: 450px) {
+    .error-container svg.error404 {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      margin-top: -250px;
+      margin-left: -190px;
+    }
+    .error-container .error404.message-box {
+      top: 50%;
+      left: 50%;
+      margin-top: -100px;
+      margin-left: -190px;
+      text-align: center;
+    }
+  }
