@@ -15,9 +15,9 @@
 <table>
     <thead>
     <tr>
-        <th><?= $this->Html->link(__('Title'), '?sort=title') ?></th>
-        <th><?= $this->Html->link(__('Created'), '?sort=created') ?></th>
-        <th><?= $this->Html->link(__('Published'), '?sort=published') ?></th>
+        <th><?= $this->Paginator->sort('title',__('Title')) ?></th>
+        <th><?= $this->Paginator->sort('created',__('Created'))  ?></th>
+        <th><?= $this->Paginator->sort('published',__('Published')) ?></th>
         <th>Action</th>
     </tr>
     </thead>
