@@ -64,7 +64,7 @@ if (empty($msg))
 
     <link href="https://fonts.googleapis.com/css?family=Raleway:400,700" rel="stylesheet">
 
-    <?= $this->Html->css(['normalize.min',  'milligram.min', 'cake', 'home', 'bootstrap.min', 'bootstrap-icons']) ?>
+    <?= $this->Html->css(['normalize.min', 'bootstrap.min', 'bootstrap-icons', 'cake', 'home']) ?>
     <?= $this->Html->script(['bootstrap.bundle.min']) ?>
 
     <?= $this->fetch('meta') ?>

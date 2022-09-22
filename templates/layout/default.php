@@ -24,7 +24,7 @@
     <?= $this->Html->meta('icon') ?>
     <link href="https://fonts.googleapis.com/css?family=Raleway:400,700" rel="stylesheet">
 
-    <?= $this->Html->css(['normalize.min', 'milligram.min', 'cake', 'bootstrap.min', 'bootstrap-icons']) ?>
+    <?= $this->Html->css(['normalize.min', 'bootstrap.min', 'bootstrap-icons', 'cake']) ?>
     <?= $this->Html->script(['bootstrap.bundle.min','nicEdit']) ?>
 
     <?= $this->fetch('meta') ?>

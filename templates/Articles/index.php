@@ -35,8 +35,8 @@
             <?= $article->activated ?"/Active/" :"/Inactive/" ?>
         </td>
         <td>
-            <?= $this->Html->link('Publish', ['action' => 'publish', $article->slug]) ?>
-            <?= $this->Html->link('Edit', ['action' => 'edit', $article->slug]) ?>
+            <?= $this->Html->link(__('Publish'), ['action' => 'publish', $article->slug]) ?>
+            <?= $this->Html->link(__('Edit'), ['action' => 'edit', $article->slug]) ?>
             <?= $this->Form->postLink(
                 'Delete',
                 ['action' => 'delete', $article->slug],

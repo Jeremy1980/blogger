@@ -37,6 +37,17 @@ class ArticlesController extends AppController
     public function view($slug = null)
     {
         $article = $this->Articles->findBySlug($slug)->firstOrFail();
+
+        $next_article = $this->Articles->find()->where(
+            ['activated = 1' ,'published IS NOT NULL' ,'id > ' . $article->id]
+        )->first();
+        $article->next = is_object($next_article) ?array('title'=>$next_article->title, 'slug'=>$next_article->slug) :null;
+
+        $previous_article = $this->Articles->find()->where(
+            ['activated = 1' ,'published IS NOT NULL' ,'id < ' . $article->id]
+        )->first();
+        $article->previous = is_object($previous_article) ?array('title'=>$previous_article->title, 'slug'=>$previous_article->slug) :null;
+
         $this->set(compact('article'));
     }
 
