@@ -12,13 +12,14 @@
 ?>        
 
 <h1>Articles</h1>
-<table>
+<table class="table">
     <thead>
     <tr>
         <th><?= $this->Paginator->sort('title',__('Title')) ?></th>
-        <th><?= $this->Paginator->sort('created',__('Created'))  ?></th>
+        <th><?= $this->Paginator->sort('created',__('Created')) ?></th>
+        <th><?= $this->Paginator->sort('modified',__('Modified')) ?></th>
         <th><?= $this->Paginator->sort('published',__('Published')) ?></th>
-        <th>Action</th>
+        <th><?= __('Action') ?></th>
     </tr>
     </thead>
     <tbody>
@@ -28,10 +29,13 @@
             <?= $this->Html->link($article->title, ['action' => 'view', $article->slug]) ?>
         </td>
         <td>
-            <?= $article->created->format(DATE_RFC850) ?>
+            <?= $article->created->nice() ?>
         </td>
         <td>
-            <?= empty($article->published) ?"Draft" :$article->published->format(DATE_RFC850) ?>
+            <?= $article->modified->nice() ?>
+        </td>
+        <td>
+            <?= empty($article->published) ?"Draft" :$article->published->nice() ?>
             <?= $article->activated ?"/Active/" :"/Inactive/" ?>
         </td>
         <td>
