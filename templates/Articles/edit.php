@@ -3,6 +3,7 @@
     echo $this->Form->create($article);
     echo $this->Form->control('user_id', ['type' => 'hidden']);
     echo $this->Form->control('title' ,['class'=>'form-control']);
+    echo $this->Form->control('slug' ,['class'=>'form-control']);
     echo $this->Form->control('body', ['class'=>'form-control' ,'style' => 'height:300px !important;']);
     echo $this->Form->control('active', ['type' => 'checkbox' ,'checked'=> ($article->activated ?1 :0) ]);
     echo $this->Form->button(__('Save Article') ,['class'=>'btn btn-primary']);

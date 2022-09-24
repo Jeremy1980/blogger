@@ -43,8 +43,10 @@
     </nav>
     <main class="main">
         <div class="container">
-            <?= $this->Flash->render() ?>
-            <?= $this->fetch('content') ?>
+            <div class="content mb-5">
+                <?= $this->Flash->render() ?>
+                <?= $this->fetch('content') ?>
+            </div>
         </div>
     </main>
     <footer>
