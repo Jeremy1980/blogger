@@ -14,6 +14,10 @@
         ,['class'=>'form-control' ,'maxlength'=>'24']   
     );
     echo $this->Form->control(
+        'published'
+        ,['class'=>'form-control']   
+    );
+    echo $this->Form->control(
         'active'
         ,['type' => 'checkbox' ,'checked' => False]
     );
