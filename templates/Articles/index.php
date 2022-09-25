@@ -11,20 +11,20 @@
     ]);
 ?>        
 
-<h1>Articles</h1>
-<table class="table">
+<h1><?=__('Articles')?></h1>
+<table class="table table-striped">
     <thead>
     <tr>
-        <th><?= $this->Paginator->sort('title',__('Title')) ?></th>
-        <th><?= $this->Paginator->sort('created',__('Created')) ?></th>
-        <th><?= $this->Paginator->sort('modified',__('Modified')) ?></th>
-        <th><?= $this->Paginator->sort('published',__('Published')) ?></th>
-        <th><?= __('Action') ?></th>
+        <th scope="col"><?= $this->Paginator->sort('title',__('Title')) ?></th>
+        <th scope="col"><?= $this->Paginator->sort('created',__('Created')) ?></th>
+        <th scope="col"><?= $this->Paginator->sort('modified',__('Modified')) ?></th>
+        <th scope="col"><?= $this->Paginator->sort('published',__('Published')) ?></th>
+        <th scope="col"><?= __('Action') ?></th>
     </tr>
     </thead>
     <tbody>
     <?php foreach ($articles as $article): ?>
-    <tr>
+    <tr scope="row">
         <td>
             <?= $this->Html->link($article->title, ['action' => 'view', $article->slug]) ?>
         </td>
@@ -35,7 +35,7 @@
             <?= $article->modified->nice() ?>
         </td>
         <td>
-            <?= empty($article->published) ?"Draft" :$article->published->nice() ?>
+            <?= empty($article->published) ?__("Draft") :$article->published->nice() ?>
             <?= $article->activated ?"/Active/" :"/Inactive/" ?>
         </td>
         <td>

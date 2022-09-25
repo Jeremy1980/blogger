@@ -57,7 +57,6 @@ class ArticlesController extends AppController
         if ($this->request->is('post')) {
             $article = $this->Articles->patchEntity($article, $this->request->getData());
 
-            $article->user_id = 1;
             $article->activated = $article->active ?1 :0;
 
             if ($this->Articles->save($article)) {
