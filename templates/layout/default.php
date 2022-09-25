@@ -14,7 +14,10 @@
  * @var \App\View\AppView $this
  */
 
+$action = $this->request->getParam('action');
 ?>
+
+
 <!DOCTYPE html>
 <html>
 <head>
@@ -37,8 +40,10 @@
             <a href="<?= $this->Url->build('/') ?>"><span>Cake</span>PHP</a>
         </div>
         <div class="top-nav-links">
+            <?php if ($action !== "view"): ?>
             <?= $this->Html->link('Add Article', ['action' => 'add']) ?>
             <?= $this->Html->link('Articles', '/articles', ['rel' => 'noopener']) ?>
+            <?php endif; ?>
         </div>
     </nav>
     <main class="main">

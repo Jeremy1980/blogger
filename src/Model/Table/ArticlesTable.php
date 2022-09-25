@@ -34,7 +34,7 @@ class ArticlesTable extends Table
             ->add('title', [
                 'length' => [
                     'rule' => ['minLength', 10],
-                    'message' => sprintf(__('Titles need to be at least %s characters long', true), 10),
+                    'message' => sprintf(__('Titles need to be at least %s characters long.', true), 10),
                 ]
             ])
 

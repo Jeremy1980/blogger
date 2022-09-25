@@ -12,7 +12,7 @@
      if ($article->previous)
      {
         print $this->Html->link(
-             __('Previously').'&nbsp;'.$article->previous['title']
+             __('Previously').'  '.$article->previous['title']
             ,['action' => 'view', $article->previous['slug']]
             ,['class'=>'btn btn-outline-secondary']
         );
@@ -20,7 +20,7 @@
     if ($article->next)
     {
         print $this->Html->link(
-             __('What is next?').'&nbsp;'.$article->next['title']
+             __('What is next?').'  '.$article->next['title']
             ,['action' => 'view', $article->next['slug']]
             ,['class'=>'btn btn-outline-secondary']
         );

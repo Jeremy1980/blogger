@@ -52,6 +52,7 @@
     </tbody>
     </table>
     
+    <?php if($this->Paginator->numbers()): ?>
     <div class="row">
         <div class="col">
             <nav aria-label="Page navigation">
@@ -65,3 +66,4 @@
             </nav>
         </div>
     </div>
+    <?php endif; ?>
