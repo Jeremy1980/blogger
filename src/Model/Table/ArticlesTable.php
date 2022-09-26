@@ -42,7 +42,9 @@ class ArticlesTable extends Table
             ->add('body', 'length', [
                 'rule' => ['minLength', 50],
                 'message' => __('Articles must have a substantial body.')
-            ]);
+            ])
+            
+            ->notEmptyString('author');
 
         return $validator;
     }    
