@@ -10,19 +10,14 @@ The framework source code can be found here: [cakephp/cakephp](https://github.co
 
 ## Installation
 
-1. Download [Composer](https://getcomposer.org/doc/00-intro.md) or update `composer self-update`.
-2. Run `php composer.phar create-project --prefer-dist cakephp/app [app_name]`.
-
-If Composer is installed globally, run
-
+With this command, install what is necessary to run this application.
 ```bash
-composer create-project --prefer-dist cakephp/app
+composer install
 ```
 
-In case you want to use a custom app dir name (e.g. `/myapp/`):
-
+Use migrations, to create database structure and load sample data on which the application will work.
 ```bash
-composer create-project --prefer-dist cakephp/app myapp
+bin/cake migrations migrate
 ```
 
 You can now either use your machine's webserver to view the default home page, or start
@@ -48,6 +43,5 @@ Other environment agnostic settings can be changed in `config/app.php`.
 
 ## Layout
 
-The app skeleton uses [Milligram](https://milligram.io/) (v1.3) minimalist CSS
-framework by default. You can, however, replace it with any other library or
+The app skeleton uses Bootstrap  v5.2.1 (https://getbootstrap.com/) by default. You can, however, replace it with any other library or
 custom styles.
