@@ -8,6 +8,12 @@ A skeleton for creating applications with [CakePHP](https://cakephp.org) 4.x.
 
 The framework source code can be found here: [cakephp/cakephp](https://github.com/cakephp/cakephp).
 
+## Configuration
+
+Read and edit the environment specific `config/app_local.php` and setup the 
+`'Datasources'` and any other configuration relevant for your application.
+Other environment agnostic settings can be changed in `config/app.php`.
+
 ## Installation
 
 With this command, install what is necessary to run this application.
@@ -35,11 +41,6 @@ Since this skeleton is a starting point for your application and various files
 would have been modified as per your needs, there isn't a way to provide
 automated upgrades, so you have to do any updates manually.
 
-## Configuration
-
-Read and edit the environment specific `config/app_local.php` and setup the 
-`'Datasources'` and any other configuration relevant for your application.
-Other environment agnostic settings can be changed in `config/app.php`.
 
 ## Layout
 
