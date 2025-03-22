@@ -11,15 +11,15 @@
     ]);
 ?>        
 
-<h1><?=__('Articles')?></h1>
+<h1><?=__('Artykuły')?></h1>
 <table class="table table-striped">
     <thead>
     <tr>
-        <th scope="col"><?= $this->Paginator->sort('title',__('Title')) ?></th>
-        <th scope="col"><?= $this->Paginator->sort('created',__('Created')) ?></th>
-        <th scope="col"><?= $this->Paginator->sort('modified',__('Modified')) ?></th>
-        <th scope="col"><?= $this->Paginator->sort('published',__('Published')) ?></th>
-        <th scope="col"><?= __('Action') ?></th>
+        <th scope="col"><?= $this->Paginator->sort('title',__('Tytuł')) ?></th>
+        <th scope="col"><?= $this->Paginator->sort('created',__('Utworzono')) ?></th>
+        <th scope="col"><?= $this->Paginator->sort('modified',__('Zmodyfikowano')) ?></th>
+        <th scope="col"><?= $this->Paginator->sort('published',__('Opubilkowano')) ?></th>
+        <th scope="col"><?= __('Akcja') ?></th>
     </tr>
     </thead>
     <tbody>
@@ -35,16 +35,16 @@
             <?= $article->modified->nice() ?>
         </td>
         <td>
-            <?= empty($article->published) ?__("Draft") :$article->published->nice() ?>
-            <?= $article->activated ?"/Active/" :"/Inactive/" ?>
+            <?= empty($article->published) ?__("Szlic") :$article->published->nice() ?>
+            <?= $article->activated ?"/Aktywne/" :"/Nieaktywne/" ?>
         </td>
         <td>
-            <?= $this->Html->link(__('Publish'), ['action' => 'publish', $article->slug]) ?>
-            <?= $this->Html->link(__('Edit'), ['action' => 'edit', $article->slug]) ?>
+            <?= $this->Html->link(__('Opublikuj'), ['action' => 'publish', $article->slug]) ?>
+            <?= $this->Html->link(__('Edycja'), ['action' => 'edit', $article->slug]) ?>
             <?= $this->Form->postLink(
-                'Delete',
+                'Usuń',
                 ['action' => 'delete', $article->slug],
-                ['confirm' => 'Are you sure?'])
+                ['confirm' => 'Czy napewno usunąć?'])
             ?>            
         </td>        
     </tr>
@@ -57,11 +57,11 @@
         <div class="col">
             <nav aria-label="Page navigation">
                 <ul class="pagination">
-                    <?= $this->Paginator->first(__('First')) ?>
-                    <?= $this->Paginator->prev(__('Previous')) ?>
+                    <?= $this->Paginator->first(__('<<')) ?>
+                    <?= $this->Paginator->prev(__('<')) ?>
                     <?= $this->Paginator->numbers() ?>
-                    <?= $this->Paginator->next(__('Next')) ?>
-                    <?= $this->Paginator->last(__('Last')) ?>
+                    <?= $this->Paginator->next(__('>')) ?>
+                    <?= $this->Paginator->last(__('>>')) ?>
                 </ul>
             </nav>
         </div>

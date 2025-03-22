@@ -98,7 +98,7 @@ if (empty($msg))
                 <?php endforeach; ?>
                 <div class="row">
                     <div class="col-11 text-end">
-                        <?= $this->Html->link('Manage articles', '/articles', ['rel' => 'noopener']) ?>
+                        <?= $this->Html->link(__('Zarządzaj artykułami'), '/articles', ['rel' => 'noopener']) ?>
                     </div>
                 </div>
                 <?php endif; ?>

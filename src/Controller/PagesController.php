@@ -22,6 +22,8 @@ use Cake\Http\Exception\NotFoundException;
 use Cake\Http\Response;
 use Cake\View\Exception\MissingTemplateException;
 
+use Cake\Event\EventInterface;
+
 /**
  * Static content controller
  *
@@ -31,6 +33,14 @@ use Cake\View\Exception\MissingTemplateException;
  */
 class PagesController extends AppController
 {
+
+    public function beforeFilter(EventInterface $event)
+    {
+        parent::beforeFilter($event);
+        // Zezwól niezalogowanym użytkownikom na wyświetlenie zawartości
+        $this->Authentication->addUnauthenticatedActions(['display']);
+    }    
+
     /**
      * Displays a view
      *

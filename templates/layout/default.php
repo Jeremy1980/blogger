@@ -41,8 +41,9 @@ $action = $this->request->getParam('action');
         </div>
         <div class="top-nav-links">
             <?php if ($action !== "view"): ?>
-            <?= $this->Html->link('Add Article', ['action' => 'add']) ?>
-            <?= $this->Html->link('Articles', '/articles', ['rel' => 'noopener']) ?>
+            <?= $this->Html->link(__('Dodaj artykuł'), ['action' => 'add']) ?>
+            <?= $this->Html->link(__('Artykuły'), '/articles', ['rel' => 'noopener']) ?>
+            <?= $this->Html->link(__('Wyloguj się'), '/users/logout', ['rel' => 'noopener']) ?>
             <?php endif; ?>
         </div>
     </nav>

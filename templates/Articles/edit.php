@@ -1,4 +1,4 @@
-<h1><?=__('Edit Article')?></h1>
+<h1><?=__('Edytuj artykuł')?></h1>
 <?php
     echo $this->Form->create($article);
     echo $this->Form->control(
@@ -26,7 +26,7 @@
         ,['type' => 'checkbox' ,'checked'=> ($article->activated ?1 :0) ]
     );
     echo $this->Form->button(
-        __('Save Article')
+        __('Zapisz artykuł')
         ,['class'=>'btn btn-primary']
     );
     echo $this->Form->end();

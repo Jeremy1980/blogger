@@ -1,4 +1,4 @@
-<h1><?=__('Add Article')?></h1>
+<h1><?=__('Dodaj artykuł')?></h1>
 <?php
     echo $this->Form->create($article);
     echo $this->Form->control(
@@ -22,7 +22,7 @@
         ,['type' => 'checkbox' ,'checked' => False]
     );
     echo $this->Form->button(
-        __('Save Article')
+        __('Zapisz artykuł')
         ,['class'=>'btn btn-primary' ,'onclick'=>'nicEditors.findEditor("htmlEditor").saveContent()']
     );
     echo $this->Form->end();

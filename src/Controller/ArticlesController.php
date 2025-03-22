@@ -1,12 +1,21 @@
 <?php
 namespace App\Controller;
 
+use Cake\Event\EventInterface;
+
 class ArticlesController extends AppController
 {
     public $paginate = [
         'limit' => 10,
         'order' => [ 'Articles.title' => 'asc' ]
     ];
+
+    public function beforeFilter(EventInterface $event)
+    {
+        parent::beforeFilter($event);
+        // Zezwól niezalogowanym użytkownikom na wyświetlenie zawartości
+        $this->Authentication->addUnauthenticatedActions(['view']);
+    }
 
     public function initialize(): void
     {
