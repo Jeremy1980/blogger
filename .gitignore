@@ -79,4 +79,6 @@ nbproject/*
 # yarn
 yarn-debug.log
 yarn-error.log
+# docker
+composer.lock
 >>>>>>> master

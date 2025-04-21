@@ -16,11 +16,12 @@ class UsersController extends AppController
         parent::beforeFilter($event);
         // Zezwól niezalogowanym użytkownikom na rejestrację i aktywację
         $this->Authentication->addUnauthenticatedActions(['register', 'login', 'logout', 'activate', 'forgotPassword', 'resetPassword']);
+
+        $this->viewBuilder()->setLayout('default');
     }
     
     public function register()
     {
-        $this->viewBuilder()->setLayout('default');
         $user = $this->Users->newEmptyEntity();
         if ($this->request->is('post')) {
             $user = $this->Users->patchEntity($user, $this->request->getData());
@@ -71,7 +72,6 @@ class UsersController extends AppController
     
     public function login()
     {
-        $this->viewBuilder()->setLayout('default');
         $this->request->allowMethod(['get', 'post']);
         $result = $this->Authentication->getResult();
         
@@ -84,7 +84,7 @@ class UsersController extends AppController
             }
             
             $redirect = $this->request->getQuery('redirect', [
-                'controller' => 'Pages',
+                'controller' => 'pages',
                 'action' => 'display',
                 'home'
             ]);
@@ -105,11 +105,11 @@ class UsersController extends AppController
             $this->Flash->success(__('Wylogowano pomyślnie.'));
             return $this->redirect(['controller' => 'Pages', 'action' => 'display', 'home']);
         }
+        return $this->redirect(['controler' => 'pages', 'action' => 'display']);
     }
     
     public function forgotPassword()
     {
-        $this->viewBuilder()->setLayout('default');
         if ($this->request->is('post')) {
             $email = $this->request->getData('email');
             $user = $this->Users->findByEmail($email)->first();
@@ -133,7 +133,6 @@ class UsersController extends AppController
     
     public function resetPassword($token = null)
     {
-        $this->viewBuilder()->setLayout('default');
         if (!$token) {
             $this->Flash->error(__('Nieprawidłowy token resetowania hasła.'));
             return $this->redirect(['action' => 'login']);

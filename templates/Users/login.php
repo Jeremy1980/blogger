@@ -7,7 +7,7 @@
     <div class="col-md-6">
         <div class="card">
             <div class="card-header">
-                <h5 class="card-title mb-0">Logowanie</h5>
+                <h5 class="card-title mb-0"><?=__('Logowanie')?></h5>
             </div>
             <div class="card-body">
                 <?= $this->Flash->render() ?>
@@ -15,16 +15,16 @@
                 <div class="mb-3">
                     <?= $this->Form->control('email', [
                         'class' => 'form-control',
-                        'placeholder' => 'Podaj adres e-mail',
-                        'label' => ['class' => 'form-label', 'text' => 'Adres e-mail'],
+                        'placeholder' => __('Podaj adres e-mail'),
+                        'label' => ['class' => 'form-label', 'text' => __('Adres e-mail')],
                         'required' => true
                     ]) ?>
                 </div>
                 <div class="mb-3">
                     <?= $this->Form->control('password', [
                         'class' => 'form-control',
-                        'placeholder' => 'Podaj hasło',
-                        'label' => ['class' => 'form-label', 'text' => 'Hasło'],
+                        'placeholder' => __('Podaj hasło'),
+                        'label' => ['class' => 'form-label', 'text' => __('Hasło')],
                         'required' => true
                     ]) ?>
                 </div>
@@ -36,7 +36,7 @@
                     <p>
                         <?= $this->Html->link(__('Zapomniałeś hasła?'), ['action' => 'forgotPassword'], ['class' => 'link-primary']) ?>
                     </p>
-                    <p>Nie masz konta? <?= $this->Html->link(__('Zarejestruj się'), ['action' => 'register'], ['class' => 'link-primary']) ?></p>
+                    <p><?=__('Nie masz konta?')?> <?= $this->Html->link(__('Zarejestruj się'), ['action' => 'register'], ['class' => 'link-primary']) ?></p>
                 </div>
             </div>
         </div>

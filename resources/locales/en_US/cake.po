@@ -1,0 +1,8 @@
+#: ./templates/Error/error500.php:41
+msgid "An Internal Error Has Occurred."
+msgstr "An Internal Error Has Occurred."
+
+#: ./templates/Error/error500.php:43
+msgid "Error"
+msgstr "Error"
+

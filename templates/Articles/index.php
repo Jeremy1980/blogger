@@ -18,7 +18,7 @@
         <th scope="col"><?= $this->Paginator->sort('title',__('Tytuł')) ?></th>
         <th scope="col"><?= $this->Paginator->sort('created',__('Utworzono')) ?></th>
         <th scope="col"><?= $this->Paginator->sort('modified',__('Zmodyfikowano')) ?></th>
-        <th scope="col"><?= $this->Paginator->sort('published',__('Opubilkowano')) ?></th>
+        <th scope="col"><?= $this->Paginator->sort('published',__('Opublikowano')) ?></th>
         <th scope="col"><?= __('Akcja') ?></th>
     </tr>
     </thead>

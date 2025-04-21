@@ -1,0 +1,324 @@
+#: ./src/Console/Installer.php:203
+msgid "No Security.salt placeholder to replace."
+msgstr "Brak zastępczego symbolu Security.salt do zastąpienia."
+
+#: ./src/Console/Installer.php:210
+msgid "Updated Security.salt value in config/"
+msgstr "Zaktualizowano wartość Security.salt w config/"
+
+#: ./src/Console/Installer.php:214
+msgid "Unable to update Security.salt value."
+msgstr "Nie można zaktualizować wartości Security.salt."
+
+#: ./src/Console/Installer.php:233
+msgid "No __APP_NAME__ placeholder to replace."
+msgstr "Brak symbolu zastępczego __APP_NAME__ do zastąpienia."
+
+#: ./src/Console/Installer.php:240
+msgid "Updated __APP_NAME__ value in config/"
+msgstr "Zaktualizowano wartość __APP_NAME__ w config/"
+
+#: ./src/Console/Installer.php:244
+msgid "Unable to update __APP_NAME__ value."
+msgstr "Nie można zaktualizować wartości __APP_NAME__."
+
+#: ./src/Controller/ArticlesController.php:72
+msgid "Your article has been saved."
+msgstr "Twój artykuł został zapisany."
+
+#: ./src/Controller/ArticlesController.php:75
+msgid "Unable to add your article."
+msgstr "Nie można dodać artykułu."
+
+#: ./src/Controller/ArticlesController.php:93
+msgid "Your article has been updated."
+msgstr "Twój artykuł został zaktualizowany."
+
+#: ./src/Controller/ArticlesController.php:96
+msgid "Unable to update your article."
+msgstr "Nie można zaktualizować artykułu."
+
+#: ./src/Controller/ArticlesController.php:108
+msgid "The {0} article has been deleted."
+msgstr "Artykuł {0} został usunięty."
+
+#: ./src/Controller/UsersController.php:36
+msgid "Rejestracja przebiegła pomyślnie. Sprawdź swoją skrzynkę e-mail, aby aktywować konto."
+msgstr ""
+
+#: ./src/Controller/UsersController.php:39
+msgid "Rejestracja nie powiodła się. Spróbuj ponownie."
+msgstr ""
+
+#: ./src/Controller/UsersController.php:47
+msgid "Nieprawidłowy token aktywacyjny."
+msgstr ""
+
+#: ./src/Controller/UsersController.php:56
+msgid "Nieprawidłowy token aktywacyjny lub konto zostało już aktywowane."
+msgstr ""
+
+#: ./src/Controller/UsersController.php:64
+msgid "Twoje konto zostało aktywowane. Możesz się teraz zalogować."
+msgstr ""
+
+#: ./src/Controller/UsersController.php:68
+msgid "Nie udało się aktywować konta. Spróbuj ponownie."
+msgstr ""
+
+#: ./src/Controller/UsersController.php:82
+msgid "Konto nie zostało aktywowane. Sprawdź swoją skrzynkę e-mail."
+msgstr ""
+
+#: ./src/Controller/UsersController.php:96
+msgid "Nieprawidłowy e-mail lub hasło"
+msgstr ""
+
+#: ./src/Controller/UsersController.php:105
+msgid "Wylogowano pomyślnie."
+msgstr ""
+
+#: ./src/Controller/UsersController.php:123
+msgid "Odnośnik do resetowania hasła został wysłany na Twój adres e-mail."
+msgstr ""
+
+#: ./src/Controller/UsersController.php:128
+msgid "Odnośnik do resetowania hasła został wysłany na Twój adres e-mail (jeśli istnieje)."
+msgstr ""
+
+#: ./src/Controller/UsersController.php:138
+msgid "Nieprawidłowy token resetowania hasła."
+msgstr ""
+
+#: ./src/Controller/UsersController.php:150
+msgid "Token resetowania hasła jest nieprawidłowy lub wygasł."
+msgstr ""
+
+#: ./src/Controller/UsersController.php:160
+msgid "Hasło zostało zmienione. Możesz się teraz zalogować."
+msgstr ""
+
+#: ./src/Controller/UsersController.php:163
+msgid "Nie udało się zmienić hasła. Spróbuj ponownie."
+msgstr ""
+
+#: ./src/Model/Table/ArticlesTable.php:37
+msgid "Titles need to be at least %s characters long."
+msgstr "Tytuły muszą mieć co najmniej %s znaków."
+
+#: ./src/Model/Table/ArticlesTable.php:44
+msgid "Articles must have a substantial body."
+msgstr "Artykuły muszą mieć obszerną treść."
+
+#: ./templates/Articles/add.php:1
+#: ./templates/layout/default.php:44
+msgid "Dodaj artykuł"
+msgstr ""
+
+#: ./templates/Articles/add.php:25
+#: ./templates/Articles/edit.php:29
+msgid "Zapisz artykuł"
+msgstr ""
+
+#: ./templates/Articles/edit.php:1
+msgid "Edytuj artykuł"
+msgstr ""
+
+#: ./templates/Articles/index.php:14
+#: ./templates/layout/default.php:45
+msgid "Artykuły"
+msgstr ""
+
+#: ./templates/Articles/index.php:18
+msgid "Tytuł"
+msgstr ""
+
+#: ./templates/Articles/index.php:19
+msgid "Utworzono"
+msgstr ""
+
+#: ./templates/Articles/index.php:20
+msgid "Zmodyfikowano"
+msgstr ""
+
+#: ./templates/Articles/index.php:21
+msgid "Opublikowano"
+msgstr ""
+
+#: ./templates/Articles/index.php:22
+msgid "Akcja"
+msgstr ""
+
+#: ./templates/Articles/index.php:38
+msgid "Szlic"
+msgstr ""
+
+#: ./templates/Articles/index.php:42
+msgid "Opublikuj"
+msgstr ""
+
+#: ./templates/Articles/index.php:43
+msgid "Edycja"
+msgstr ""
+
+#: ./templates/Articles/index.php:60
+msgid "<<"
+msgstr ""
+
+#: ./templates/Articles/index.php:61
+msgid "<"
+msgstr ""
+
+#: ./templates/Articles/index.php:63
+msgid ">"
+msgstr ""
+
+#: ./templates/Articles/index.php:64
+msgid ">>"
+msgstr ""
+
+#: ./templates/Articles/view.php:9
+msgid "Edytuj"
+msgstr ""
+
+#: ./templates/Articles/view.php:15
+msgid "Poprzedni"
+msgstr ""
+
+#: ./templates/Articles/view.php:23
+msgid "Co jest następne?"
+msgstr ""
+
+#: ./templates/Error/error400.php:54
+msgid "404"
+msgstr "404"
+
+#: ./templates/Error/error400.php:55
+msgid "PAGE NOT FOUND"
+msgstr "PAGE NOT FOUND"
+
+#: ./templates/Error/error400.php:57
+msgid "Home Page"
+msgstr "Strona główna"
+
+#: ./templates/Pages/home.php:46
+msgid "CakePHP is NOT able to connect to the database."
+msgstr "CakePHP NIE może połączyć się z bazą danych."
+
+#: ./templates/Pages/home.php:101
+msgid "Zarządzaj artykułami"
+msgstr ""
+
+#: ./templates/Users/forgot_password.php:10
+msgid "Resetowanie hasła"
+msgstr ""
+
+#: ./templates/Users/forgot_password.php:19
+#: ./templates/Users/login.php:18
+#: ./templates/Users/register.php:18
+msgid "Podaj adres e-mail"
+msgstr ""
+
+#: ./templates/Users/forgot_password.php:20
+#: ./templates/Users/login.php:19
+#: ./templates/Users/register.php:19
+msgid "Adres e-mail"
+msgstr ""
+
+#: ./templates/Users/forgot_password.php:25
+msgid "Wyślij odnośnik resetujący"
+msgstr ""
+
+#: ./templates/Users/forgot_password.php:29
+msgid "Powrót do logowania"
+msgstr ""
+
+#: ./templates/Users/login.php:10
+msgid "Logowanie"
+msgstr ""
+
+#: ./templates/Users/login.php:26
+msgid "Podaj hasło"
+msgstr ""
+
+#: ./templates/Users/login.php:27
+#: ./templates/Users/register.php:43
+msgid "Hasło"
+msgstr ""
+
+#: ./templates/Users/login.php:32
+#: ./templates/Users/register.php:61
+msgid "Zaloguj się"
+msgstr ""
+
+#: ./templates/Users/login.php:37
+msgid "Zapomniałeś hasła?"
+msgstr ""
+
+#: ./templates/Users/login.php:39
+#: ./templates/Users/register.php:57
+msgid "Zarejestruj się"
+msgstr ""
+
+#: ./templates/Users/register.php:11
+msgid "Rejestracja"
+msgstr ""
+
+#: ./templates/Users/register.php:26
+msgid "Podaj imię"
+msgstr ""
+
+#: ./templates/Users/register.php:27
+msgid "Imię"
+msgstr ""
+
+#: ./templates/Users/register.php:34
+msgid "Podaj nazwisko"
+msgstr ""
+
+#: ./templates/Users/register.php:35
+msgid "Nazwisko"
+msgstr ""
+
+#: ./templates/Users/register.php:42
+#: ./templates/Users/reset_password.php:19
+msgid "Minimum 8 znaków"
+msgstr ""
+
+#: ./templates/Users/register.php:51
+msgid "Powtórz hasło"
+msgstr ""
+
+#: ./templates/Users/register.php:52
+msgid "Potwierdź hasło"
+msgstr ""
+
+#: ./templates/Users/reset_password.php:11
+msgid "Ustaw nowe hasło"
+msgstr ""
+
+#: ./templates/Users/reset_password.php:20
+msgid "Nowe hasło"
+msgstr ""
+
+#: ./templates/Users/reset_password.php:29
+msgid "Powtórz nowe hasło"
+msgstr ""
+
+#: ./templates/Users/reset_password.php:30
+msgid "Potwierdź nowe hasło"
+msgstr ""
+
+#: ./templates/Users/reset_password.php:35
+msgid "Zapisz nowe hasło"
+msgstr ""
+
+#: ./templates/layout/default.php:46
+msgid "Wyloguj się"
+msgstr ""
+
+msgid  "Nie masz konta?"
+msgstr "Nie masz konta?"
+
+msgid  "Masz już konto?"
+msgstr "Masz już konto?"

@@ -43,7 +43,7 @@ $checkConnection = function (string $name) {
 
 $articles_assoc = array();
 $conn = $checkConnection('default');
-$msg = is_object($conn)?'' :'CakePHP is NOT able to connect to the database.';
+$msg = is_object($conn)?'' :__('CakePHP is NOT able to connect to the database.');
 
 if (empty($msg))
 {

@@ -18,5 +18,5 @@
 $lines = explode("\n", $content);
 
 foreach ($lines as $line) :
-    echo '<p> ' . $line . "</p>\n";
+    echo '<p> ' . $line . "</p>" . PHP_EOL;
 endforeach;

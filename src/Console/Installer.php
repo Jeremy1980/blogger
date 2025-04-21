@@ -200,18 +200,18 @@ class Installer
         $content = str_replace('__SALT__', $newKey, $content, $count);
 
         if ($count == 0) {
-            $io->write('No Security.salt placeholder to replace.');
+            $io->write(__('No Security.salt placeholder to replace.'));
 
             return;
         }
 
         $result = file_put_contents($config, $content);
         if ($result) {
-            $io->write('Updated Security.salt value in config/' . $file);
+            $io->write(__('Updated Security.salt value in config/') . $file);
 
             return;
         }
-        $io->write('Unable to update Security.salt value.');
+        $io->write(__('Unable to update Security.salt value.'));
     }
 
     /**
@@ -230,17 +230,17 @@ class Installer
         $content = str_replace('__APP_NAME__', $appName, $content, $count);
 
         if ($count == 0) {
-            $io->write('No __APP_NAME__ placeholder to replace.');
+            $io->write(__('No __APP_NAME__ placeholder to replace.'));
 
             return;
         }
 
         $result = file_put_contents($config, $content);
         if ($result) {
-            $io->write('Updated __APP_NAME__ value in config/' . $file);
+            $io->write(__('Updated __APP_NAME__ value in config/') . $file);
 
             return;
         }
-        $io->write('Unable to update __APP_NAME__ value.');
+        $io->write(__('Unable to update __APP_NAME__ value.'));
     }
 }

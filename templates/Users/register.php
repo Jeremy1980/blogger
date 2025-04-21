@@ -8,39 +8,39 @@
     <div class="col-md-6">
         <div class="card">
             <div class="card-header">
-                <h5 class="card-title mb-0">Rejestracja</h5>
+                <h5 class="card-title mb-0"><?=__('Rejestracja')?></h5>
             </div>
             <div class="card-body">
                 <?= $this->Form->create($user, ['class' => 'needs-validation']) ?>
                 <div class="mb-3">
                     <?= $this->Form->control('email', [
                         'class' => 'form-control',
-                        'placeholder' => 'Podaj adres e-mail',
-                        'label' => ['class' => 'form-label', 'text' => 'Adres e-mail'],
+                        'placeholder' => __('Podaj adres e-mail'),
+                        'label' => ['class' => 'form-label', 'text' => __('Adres e-mail')],
                         'required' => true
                     ]) ?>
                 </div>
                 <div class="mb-3">
                     <?= $this->Form->control('first_name', [
                         'class' => 'form-control',
-                        'placeholder' => 'Podaj imię',
-                        'label' => ['class' => 'form-label', 'text' => 'Imię'],
+                        'placeholder' => __('Podaj imię'),
+                        'label' => ['class' => 'form-label', 'text' => __('Imię')],
                         'required' => true
                     ]) ?>
                 </div>
                 <div class="mb-3">
                     <?= $this->Form->control('last_name', [
                         'class' => 'form-control',
-                        'placeholder' => 'Podaj nazwisko',
-                        'label' => ['class' => 'form-label', 'text' => 'Nazwisko'],
+                        'placeholder' => __('Podaj nazwisko'),
+                        'label' => ['class' => 'form-label', 'text' => __('Nazwisko')],
                         'required' => true
                     ]) ?>
                 </div>
                 <div class="mb-3">
                     <?= $this->Form->control('password', [
                         'class' => 'form-control',
-                        'placeholder' => 'Minimum 8 znaków',
-                        'label' => ['class' => 'form-label', 'text' => 'Hasło'],
+                        'placeholder' => __('Minimum 8 znaków'),
+                        'label' => ['class' => 'form-label', 'text' => __('Hasło')],
                         'required' => true
                     ]) ?>
                 </div>
@@ -48,8 +48,8 @@
                     <?= $this->Form->control('password_confirm', [
                         'type' => 'password',
                         'class' => 'form-control',
-                        'placeholder' => 'Powtórz hasło',
-                        'label' => ['class' => 'form-label', 'text' => 'Potwierdź hasło'],
+                        'placeholder' => __('Powtórz hasło'),
+                        'label' => ['class' => 'form-label', 'text' => __('Potwierdź hasło')],
                         'required' => true
                     ]) ?>
                 </div>
@@ -58,7 +58,7 @@
                 </div>
                 <?= $this->Form->end() ?>
                 <div class="mt-3 text-center">
-                    <p>Masz już konto? <?= $this->Html->link(__('Zaloguj się'), ['action' => 'login'], ['class' => 'link-primary']) ?></p>
+                    <p><?=__('Masz już konto?')?> <?= $this->Html->link(__('Zaloguj się'), ['action' => 'login'], ['class' => 'link-primary']) ?></p>
                 </div>
             </div>
         </div>

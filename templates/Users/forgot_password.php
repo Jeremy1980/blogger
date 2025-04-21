@@ -7,17 +7,17 @@
     <div class="col-md-6">
         <div class="card">
             <div class="card-header">
-                <h5 class="card-title mb-0">Resetowanie hasła</h5>
+                <h5 class="card-title mb-0"><?=__('Resetowanie hasła')?></h5>
             </div>
             <div class="card-body">
-                <p class="card-text">Podaj adres e-mail, na który zostanie wysłany odnośnik do resetowania hasła.</p>
+                <p class="card-text">__('Podaj adres e-mail, na który zostanie wysłany odnośnik do resetowania hasła.')</p>
                 <?= $this->Flash->render() ?>
                 <?= $this->Form->create() ?>
                 <div class="mb-3">
                     <?= $this->Form->control('email', [
                         'class' => 'form-control',
-                        'placeholder' => 'Podaj adres e-mail',
-                        'label' => ['class' => 'form-label', 'text' => 'Adres e-mail'],
+                        'placeholder' => __('Podaj adres e-mail'),
+                        'label' => ['class' => 'form-label', 'text' => __('Adres e-mail')],
                         'required' => true
                     ]) ?>
                 </div>

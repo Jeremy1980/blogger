@@ -8,7 +8,7 @@
     <div class="col-md-6">
         <div class="card">
             <div class="card-header">
-                <h5 class="card-title mb-0">Ustaw nowe hasło</h5>
+                <h5 class="card-title mb-0"><?=__('Ustaw nowe hasło')?></h5>
             </div>
             <div class="card-body">
                 <?= $this->Flash->render() ?>
@@ -16,8 +16,8 @@
                 <div class="mb-3">
                     <?= $this->Form->control('password', [
                         'class' => 'form-control',
-                        'placeholder' => 'Minimum 8 znaków',
-                        'label' => ['class' => 'form-label', 'text' => 'Nowe hasło'],
+                        'placeholder' => __('Minimum 8 znaków'),
+                        'label' => ['class' => 'form-label', 'text' => __('Nowe hasło')],
                         'required' => true,
                         'value' => ''
                     ]) ?>
@@ -26,8 +26,8 @@
                     <?= $this->Form->control('password_confirm', [
                         'type' => 'password',
                         'class' => 'form-control',
-                        'placeholder' => 'Powtórz nowe hasło',
-                        'label' => ['class' => 'form-label', 'text' => 'Potwierdź nowe hasło'],
+                        'placeholder' => __('Powtórz nowe hasło'),
+                        'label' => ['class' => 'form-label', 'text' => __('Potwierdź nowe hasło')],
                         'required' => true
                     ]) ?>
                 </div>
