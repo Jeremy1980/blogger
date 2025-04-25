@@ -322,3 +322,6 @@ msgstr "Don't have an account?"
 
 msgid  "Masz już konto?"
 msgstr "Already have an account?"
+
+msgid  "View"
+msgstr ""
